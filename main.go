@@ -11,7 +11,7 @@ func main() {
 	e := gin.New()
 	e.GET("", getIPs)
 
-	listener, err := net.Listen("tcp", "0.0.0.0:8080")
+	listener, err := net.Listen("tcp4", "0.0.0.0:8080")
 	if err != nil {
 		panic(err)
 	}
